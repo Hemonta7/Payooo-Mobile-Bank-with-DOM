@@ -4,6 +4,7 @@ document.getElementById("remove-money-btn").addEventListener("click", function(e
     const pin = inputFieldValue("removeMoneyPin");
     if(isNaN(amount)){
         alert("please provide number");
+        return;
     }
     if(pin==1234){
         const display = textValue("display");

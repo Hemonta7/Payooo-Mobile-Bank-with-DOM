@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="flex justify-center items-center">
+        <div class="artboard phone-1 bg-purple-200">
+            <!-- account balance -->
+            <div class="stat">
+                <div class="stat-title">Account balance</div>
+                <div id="display" class="stat-value">9400</div>
+            </div>
+            <!-- buttons -->
+            <div class="grid gap-1">
+                <button id="add-money" class="btn btn-lg col-span-1">Add Money</button>
+                <button id="remove-money" class="btn btn-lg col-span-1">Cash Out</button>
+                <button id="transaction-btn" class="btn btn-lg col-span-2">Transactions</button>
+            </div>
+            <!-- add money form -->
+            <form id="show-add-money-form" class="card-body">
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Amount</span>
+                    </label>
+                    <input id="addMoneyAmouont" type="text" placeholder="Enter Amount" class="input input-bordered"
+                        required />
+                </div>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Password</span>
+                    </label>
+                    <input id="addMoneyPin" type="password" placeholder="password" class="input input-bordered"
+                        required />
+                </div>
+                <div class="form-control mt-6">
+                    <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+                </div>
+                <div>
+                    <p class="text-sm text-black mt-4 flex justify-center">All right reserved by &copy; Hemonta 2024
+                    </p>
+                </div>
+            </form>
+            <!-- remove money form -->
+            <form id="show-remove-money-form" class="card-body hidden">
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Amount</span>
+                    </label>
+                    <input id="removeMoneyAmouont" type="text" placeholder="Enter Amount" class="input input-bordered"
+                        required />
+                </div>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Password</span>
+                    </label>
+                    <input id="removeMoneyPin" type="password" placeholder="password" class="input input-bordered"
+                        required />
+                </div>
+                <div class="form-control mt-6">
+                    <button id="remove-money-btn" class="btn btn-primary">Remove Money</button>
+                </div>
+                <div>
+                    <p class="text-sm text-black mt-4 flex justify-center">All right reserved by &copy; Hemonta 2024
+                    </p>
+                </div>
+            </form>
+            <!-- Transaction section -->
+            <div id="show-transaction-section" class="hidden">
+                <h5>Transactions</h5>
+                <div id="transaction-container">
+
+                </div>
+                <div>
+                    <p class="text-sm text-black mt-4 flex justify-center">All right reserved by &copy; Hemonta 2024
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/feature.js"></script>
+    <script src="./js/addMoney.js"></script>
+    <script src="./js/removeMoney.js"></script>
+</body>
+
+</html>
